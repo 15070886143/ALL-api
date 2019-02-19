@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45d6b52b-9c74-40fb-a701-f1e5e242eac9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Apitest/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/case/demo-text.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/case/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apitest/case/test_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/common/base_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apitest/common/base_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/common/readExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apitest/common/readExcel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/common/readmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apitest/common/readmail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/common/updata_sheetnames.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apitest/common/updata_sheetnames.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/common/write.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apitest/common/write.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/data/textcase01.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/data/textcase02.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/data/textcase03.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/log/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apitest/log/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/report/result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/report/result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/report/result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/run-this.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apitest/run-this.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apitest/setting.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/untited4$write.coverage" NAME="write Coverage Results" MODIFIED="1548397708264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/common" />
+    <SUITE FILE_PATH="coverage/untited4$cvsread.coverage" NAME="cvsread Coverage Results" MODIFIED="1545892504106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest" />
+    <SUITE FILE_PATH="coverage/untited4$readmail.coverage" NAME="readmail Coverage Results" MODIFIED="1548310193089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/common" />
+    <SUITE FILE_PATH="coverage/untited4$run_this.coverage" NAME="run-this Coverage Results" MODIFIED="1548741014656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest" />
+    <SUITE FILE_PATH="coverage/untited4$run_this__1_.coverage" NAME="run-this (1) Coverage Results" MODIFIED="1548316651511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest330" />
+    <SUITE FILE_PATH="coverage/untited4$test_api__1_.coverage" NAME="test_api (1) Coverage Results" MODIFIED="1548398725619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/case" />
+    <SUITE FILE_PATH="coverage/untited4$return_apimsg.coverage" NAME="return-apimsg Coverage Results" MODIFIED="1546053285718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/common" />
+    <SUITE FILE_PATH="coverage/untited4$readExcel.coverage" NAME="readExcel Coverage Results" MODIFIED="1548398510226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/common" />
+    <SUITE FILE_PATH="coverage/untited4$test_SearchResultPage.coverage" NAME="test_SearchResultPage Coverage Results" MODIFIED="1546567218128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others-apitest4/InterfaceTestFramework/testCase" />
+    <SUITE FILE_PATH="coverage/untited4$dbread.coverage" NAME="dbread Coverage Results" MODIFIED="1546498389418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/commDB" />
+    <SUITE FILE_PATH="coverage/untited4$email_module.coverage" NAME="email_module Coverage Results" MODIFIED="1546419211697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled2/将来的项目/interfaceTest/common/module" />
+    <SUITE FILE_PATH="coverage/untited4$start.coverage" NAME="start Coverage Results" MODIFIED="1545893752261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sweetest" />
+    <SUITE FILE_PATH="coverage/untited4$logger__2_.coverage" NAME="logger (2) Coverage Results" MODIFIED="1546852419730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/log" />
+    <SUITE FILE_PATH="coverage/untited4$Excle.coverage" NAME="Excle Coverage Results" MODIFIED="1545732708853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExcelDataProject/ExcelUtil" />
+    <SUITE FILE_PATH="coverage/untited4$updata_sheetnames.coverage" NAME="updata_sheetnames Coverage Results" MODIFIED="1546073389563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/common" />
+    <SUITE FILE_PATH="coverage/untited4$Nosetests_for_test_SearchResultPage_SearchResultPage.coverage" NAME="Nosetests for test_SearchResultPage.SearchResultPage Coverage Results" MODIFIED="1546567191274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others-apitest4/InterfaceTestFramework/testCase" />
+    <SUITE FILE_PATH="coverage/untited4$loggers.coverage" NAME="loggers Coverage Results" MODIFIED="1546594257033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/log" />
+    <SUITE FILE_PATH="coverage/untited4$configread.coverage" NAME="configread Coverage Results" MODIFIED="1548296165475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/config" />
+    <SUITE FILE_PATH="coverage/untited4$base_api.coverage" NAME="base_api Coverage Results" MODIFIED="1548399763348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/common" />
+    <SUITE FILE_PATH="coverage/untited4$logger.coverage" NAME="logger Coverage Results" MODIFIED="1548312526008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/log" />
+    <SUITE FILE_PATH="coverage/untited4$Nosetests_for_test_api_Test_api_test_api.coverage" NAME="Nosetests for test_api.Test_api.test_api Coverage Results" MODIFIED="1546075355982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/case" />
+    <SUITE FILE_PATH="coverage/untited4$Nosetests_in_test_api_py.coverage" NAME="Nosetests in test_api.py Coverage Results" MODIFIED="1546581561355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/case" />
+    <SUITE FILE_PATH="coverage/untited4$run_this__2_.coverage" NAME="run-this (2) Coverage Results" MODIFIED="1548317771447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/测试1" />
+    <SUITE FILE_PATH="coverage/untited4$read.coverage" NAME="read Coverage Results" MODIFIED="1548300715366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/config" />
+    <SUITE FILE_PATH="coverage/untited4$writeexcel.coverage" NAME="writeexcel Coverage Results" MODIFIED="1546054039029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/common" />
+    <SUITE FILE_PATH="coverage/untited4$sendRequest.coverage" NAME="sendRequest Coverage Results" MODIFIED="1545890479384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/common" />
+    <SUITE FILE_PATH="coverage/untited4$readexcel.coverage" NAME="readexcel Coverage Results" MODIFIED="1546053957831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/common" />
+    <SUITE FILE_PATH="coverage/untited4$log.coverage" NAME="log Coverage Results" MODIFIED="1546508962528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others-apitest/Public" />
+    <SUITE FILE_PATH="coverage/untited4$base_api__1_.coverage" NAME="base_api (1) Coverage Results" MODIFIED="1548317588809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/测试1/common" />
+    <SUITE FILE_PATH="coverage/untited4$test_SearchResultPage__1_.coverage" NAME="test_SearchResultPage (1) Coverage Results" MODIFIED="1546582464278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_apitest4/InterfaceTestFramework/testCase" />
+    <SUITE FILE_PATH="coverage/untited4$test_api.coverage" NAME="test_api Coverage Results" MODIFIED="1548317614776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/测试1/case" />
+    <SUITE FILE_PATH="coverage/untited4$logger__1_.coverage" NAME="logger (1) Coverage Results" MODIFIED="1546595379061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Apitest/common" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-421453521">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="18" />
+          <entry key="project.open.time.105" value="1" />
+          <entry key="project.open.time.161" value="1" />
+          <entry key="project.open.time.182" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.315" value="1" />
+          <entry key="project.open.time.360" value="1" />
+          <entry key="project.open.time.366" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.63" value="1" />
+          <entry key="project.open.time.65" value="1" />
+          <entry key="project.open.time.72" value="1" />
+          <entry key="project.open.time.74" value="1" />
+          <entry key="project.open.time.77" value="1" />
+          <entry key="project.open.time.92" value="1" />
+          <entry key="project.open.time.94" value="1" />
+          <entry key="project.open.time.96" value="1" />
+          <entry key="project.opened" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="LICENSE" value="2" />
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="45" />
+          <entry key="ini" value="8" />
+          <entry key="json" value="1" />
+          <entry key="log" value="87" />
+          <entry key="md" value="1" />
+          <entry key="py" value="359" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="45" />
+          <entry key="Ini" value="8" />
+          <entry key="JSON" value="1" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="90" />
+          <entry key="Python" value="359" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="68" />
+          <entry key="html" value="38" />
+          <entry key="ini" value="213" />
+          <entry key="py" value="14019" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="38" />
+          <entry key="Ini" value="213" />
+          <entry key="PLAIN_TEXT" value="68" />
+          <entry key="Python" value="14018" />
+          <entry key="SQL" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Apitest/run-this.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding>
+                <element signature="e#15#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Apitest/common/base_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="116" column="24" lean-forward="true" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
+              <folding>
+                <element signature="e#98#109#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="ini" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>btn_pt</find>
+      <find>失败</find>
+      <find>hiddenRow</find>
+      <find>collapse</find>
+      <find>div_pt</find>
+      <find>div_pt1</find>
+      <find>Findyou</find>
+      <find>ft1</find>
+      <find>desc</find>
+      <find>piechart</find>
+      <find>page-header</find>
+      <find>div_base</find>
+      <find>chartline</find>
+      <find>failClass</find>
+      <find>testcase</find>
+      <find>failCase</find>
+      <find>btn-danger</find>
+      <find>circle</find>
+      <find>showCase</find>
+      <find>heading</find>
+      <find>startTime</find>
+      <find>getReportAttributes</find>
+      <find>duration</find>
+      <find>passrate</find>
+      <find>parameters</find>
+      <find>HEADING_ATTRIBUTE_TMPL</find>
+      <find>testTime</find>
+      <find>tester</find>
+      <find>DEFAULT_TESTER</find>
+      <find>mobile_keywords</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Apitest" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ExcelDataProject/ExcelUtil/Excle.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/sendRequest.py" />
+        <option value="$PROJECT_DIR$/Apitest/cvsread.py" />
+        <option value="$PROJECT_DIR$/sweetest/start.py" />
+        <option value="$PROJECT_DIR$/others-apitest/testCase/case.py" />
+        <option value="$PROJECT_DIR$/Apitest/case.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/readexcel.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/writeexcel.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/updata_sheetnames.py" />
+        <option value="$PROJECT_DIR$/Apitest/case/test-api.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/HTMLTestRunner.py" />
+        <option value="$PROJECT_DIR$/others-apitest4/HTMLTestRunner.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/HTMLTestRunnerEN.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/HTMLTestRunnerCN.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/HTMLTestRunner_cn.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/HTMLTestRunnerScreenshot.py" />
+        <option value="$PROJECT_DIR$/Apitest/report/result.html" />
+        <option value="$PROJECT_DIR$/Apitest/setting.py" />
+        <option value="$PROJECT_DIR$/../untitled2/将来的项目/interfaceTest/common/module/email_module.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/HTMLTestRunner_Chart.py" />
+        <option value="$PROJECT_DIR$/Apitest/commDB/dbread.py" />
+        <option value="$PROJECT_DIR$/others-apitest4/InterfaceTestFramework/framework/logger.py" />
+        <option value="$PROJECT_DIR$/Apitest/log/readlog.py" />
+        <option value="$PROJECT_DIR$/others-apitest4/InterfaceTestFramework/testCase/test_SearchResultPage.py" />
+        <option value="$PROJECT_DIR$/others_apitest4/InterfaceTestFramework/testCase/test_SearchResultPage.py" />
+        <option value="$PROJECT_DIR$/others_apitest4/InterfaceTestFramework/framework/logger.py" />
+        <option value="$PROJECT_DIR$/Apitest330/case/test_api.py" />
+        <option value="$PROJECT_DIR$/Apitest/log/loggers.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/loggers.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/logger.py" />
+        <option value="$PROJECT_DIR$/Apitest/config/setting.py" />
+        <option value="$PROJECT_DIR$/others-apitest3/Case/ceshiyongli.py" />
+        <option value="$PROJECT_DIR$/Apitest/config/config.ini" />
+        <option value="$PROJECT_DIR$/Apitest/config/configread.py" />
+        <option value="$PROJECT_DIR$/Apitest/config/read.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/readmail.py" />
+        <option value="$PROJECT_DIR$/Apitest/run-this.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/readExcel.py" />
+        <option value="$PROJECT_DIR$/Apitest330/logs/logger.py" />
+        <option value="$PROJECT_DIR$/Apitest/log/logger.py" />
+        <option value="$PROJECT_DIR$/Apitest/case/test_api.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/write.py" />
+        <option value="$PROJECT_DIR$/Apitest/common/base_api.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="537" />
+    <option name="y" value="111" />
+    <option name="width" value="990" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="untited4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untited4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untited4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untited4" type="462c0819:PsiDirectoryNode" />
+              <item name="Apitest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untited4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untited4" type="462c0819:PsiDirectoryNode" />
+              <item name="Apitest" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untited4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untited4" type="462c0819:PsiDirectoryNode" />
+              <item name="Apitest1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untited4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untited4" type="462c0819:PsiDirectoryNode" />
+              <item name="Apitest1" type="462c0819:PsiDirectoryNode" />
+              <item name="case" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untited4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untited4" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untited4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untited4" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled2/将来的项目/interfaceTest/run_all_tests.py" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\untited4\Apitest\config" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untited4\Apitest\log" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untited4\Apitest\common" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untited4\Apitest\case" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\untited4\Apitest\case" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untited4\Apitest\data" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untited4" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untited4\Apitest\common" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.run-this">
+    <configuration name="base_api" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untited4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Apitest/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Apitest/common/base_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="readExcel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untited4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Apitest/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Apitest/common/readExcel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run-this" type="PythonConfigurationType" factoryName="Python">
+      <module name="untited4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Apitest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Apitest/run-this.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_api (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untited4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Apitest/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Apitest/case/test_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_api" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untited4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试1/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试1/case/test_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="write" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untited4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Apitest/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Apitest/common/write.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.run-this" />
+      <item itemvalue="Python.base_api" />
+      <item itemvalue="Python.test_api" />
+      <item itemvalue="Python.test_api (1)" />
+      <item itemvalue="Python.write" />
+      <item itemvalue="Python.readExcel" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.base_api" />
+        <item itemvalue="Python.test_api (1)" />
+        <item itemvalue="Python.readExcel" />
+        <item itemvalue="Python.write" />
+        <item itemvalue="Python.test_api" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45d6b52b-9c74-40fb-a701-f1e5e242eac9" name="Default Changelist" comment="" />
+      <created>1545729299856</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545729299856</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Nosetests_in_test-api_py - 2018.12.29 at 11h 59m 40s.xml">
+      <configuration name="Nosetests in test-api.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_for_test_api_Test_api_test_api - 2018.12.29 at 17h 22m 38s.xml">
+      <configuration name="Nosetests for test_api.Test_api.test_api" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_for_test_SearchResultPage_SearchResultPage - 2019.01.04 at 09h 59m 57s.xml">
+      <configuration name="Nosetests for test_SearchResultPage.SearchResultPage" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_api_py - 2019.01.04 at 11h 30m 59s.xml">
+      <configuration name="Nosetests in test_api.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_api_py - 2019.01.04 at 11h 32m 51s.xml">
+      <configuration name="Nosetests in test_api.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_api_py - 2019.01.04 at 11h 34m 08s.xml">
+      <configuration name="Nosetests in test_api.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_api_py - 2019.01.04 at 11h 35m 50s.xml">
+      <configuration name="Nosetests in test_api.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_api_py - 2019.01.04 at 13h 40m 52s.xml">
+      <configuration name="Nosetests in test_api.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_api_py - 2019.01.04 at 13h 43m 38s.xml">
+      <configuration name="Nosetests in test_api.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_api_py - 2019.01.04 at 13h 59m 23s.xml">
+      <configuration name="Nosetests in test_api.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23714653" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32614556" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" weight="0.38409704" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012854" side_tool="true" weight="0.38409704" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32969153" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22493573" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3270525" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" visible="true" weight="0.38409704" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50064266" side_tool="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/utility.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/locator.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-349">
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/data.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/autotest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="124" column="36" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/log/log/20190107171339.log" />
+    <entry file="file://$PROJECT_DIR$/Apitest/log/log/20190107171717.log" />
+    <entry file="file://$PROJECT_DIR$/Apitest/config/config.ini" />
+    <entry file="file://$PROJECT_DIR$/Apitest/config/read.py" />
+    <entry file="file://$PROJECT_DIR$/sweetest/send_email.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest330/common/readmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-580">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/config/configread.py" />
+    <entry file="file://$PROJECT_DIR$/Apitest/log/loggers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/log/log/20190124143648.log" />
+    <entry file="file://$PROJECT_DIR$/others_apitest4/InterfaceTestFramework/framework/SendEmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/report/result.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest330/logs/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest1/run-this.py" />
+    <entry file="file://$PROJECT_DIR$/Apitest330/case/test_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest330/report/result.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest330/run-this.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/测试1/config/config.ini" />
+    <entry file="file://$PROJECT_DIR$/测试1/common/readmail.py" />
+    <entry file="file://$PROJECT_DIR$/测试1/config/configread.py" />
+    <entry file="file://$PROJECT_DIR$/测试1/report/result.html" />
+    <entry file="file://$PROJECT_DIR$/测试1/config/read.py" />
+    <entry file="file://$PROJECT_DIR$/测试1/case/test_api.py" />
+    <entry file="file://$PROJECT_DIR$/测试1/common/base_api.py" />
+    <entry file="file://$PROJECT_DIR$/测试1/run-this.py" />
+    <entry file="file://$PROJECT_DIR$/Apitest/log/log/2019-01-24-17-43-35.log" />
+    <entry file="file://$PROJECT_DIR$/Apitest/log/log/2019-01-24-17-45-03.log" />
+    <entry file="file://$PROJECT_DIR$/Apitest/log/log/2019-01-24-17-46-15.log" />
+    <entry file="file://$PROJECT_DIR$/Apitest/log/log/2019-01-24-17-47-46.log" />
+    <entry file="file://$PROJECT_DIR$/others-apitest/run_http_html.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/log/log/2019-01-24-17-49-38.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/log/log/20190124175322.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/testcase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-924">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/common/updata_sheetnames.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/report/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/log/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/testsuite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1638">
+          <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="35" column="5" selection-start-line="35" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/case/test_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="40" column="38" lean-forward="true" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/common/readExcel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/common/readmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/common/write.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/common/base_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="116" column="24" lean-forward="true" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
+          <folding>
+            <element signature="e#98#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apitest/run-this.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <element signature="e#15#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
