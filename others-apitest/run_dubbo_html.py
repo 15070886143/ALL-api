@@ -14,13 +14,13 @@ def start_dubbo_case():
     listrelust, list_fail, list_pass, list_json,list_exption,list_weizhi = testdubbointerface()
     filepath =os.path.join(basdir+'\\test_Report\\%s-result.html'%day)
     if os.path.exists(filepath) is False:
-        os.system(r'touch %s' % filepath)
+        os.system(f'touch {filepath}')
     endtime=datetime.datetime.now()
     createHtml(titles='dubbo接口自动化测试报告',filepath=filepath,starttime=starttime,
                endtime=endtime,passge=list_pass,fail=list_fail,
                id=listid,name=listname,key=listkey,coneent=listconeent,url=listurl,meth=listfangshi,
                yuqi=listqiwang,json=list_json,relusts=listrelust,weizhi=list_weizhi,exceptions=list_exption)
-    contec='dubbo接口自动化测试完成，测试通过:%s,测试失败：%s，异常:%s,未知错误：%s,详情见：%s'%(list_pass,list_fail,list_exption,list_weizhi,filepath)
+    contec = f'dubbo接口自动化测试完成，测试通过:{list_pass},测试失败：{list_fail}，异常:{list_exption},未知错误：{list_weizhi},详情见：{filepath}'
     send_ding(content=contec)
 if __name__ == '__main__':
     start_dubbo_case()

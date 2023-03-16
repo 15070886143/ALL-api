@@ -19,24 +19,20 @@ def send_requests(s,testdata):
         params = None
     try:
         headers = eval(testdata["headers"])
-        print("请求头部%s" % headers)
+        print(f"请求头部{headers}")
     except:
         headers = None
     type = testdata["type"]
-    print("*********正在执行用例*********%s*******************" % test_nub)
-    print("请求方式：%s,请求url：%s" %(method,url))
-    print("get请求参数：%s" % params)
+    print(f"*********正在执行用例*********{test_nub}*******************")
+    print(f"请求方式：{method},请求url：{url}")
+    print(f"get请求参数：{params}")
     try:
         bodydata = eval(testdata["body"])
     except:
         bodydata = {}
-    if type =="data":
-        body = bodydata
-    elif type == "json":
-        body = json.dumps(bodydata)
-    else:
-        body = bodydata
-    if method == "post":print("post请求body类型为：%s，body内容为：%s" % (type,body))
+    body = json.dumps(bodydata) if type == "json" else bodydata
+    if method == "post":
+        print(f"post请求body类型为：{type}，body内容为：{body}")
     verify = False
     res ={}
     try:
@@ -48,24 +44,17 @@ def send_requests(s,testdata):
             data=body,
             verify=verify
         )
-        print("页面返回信息：%s" % r.content.decode("utf-8"))
-        print("excel文件返回信息：%s" % testdata['checkpoint'])
+        print(f'页面返回信息：{r.content.decode("utf-8")}')
+        print(f"excel文件返回信息：{testdata['checkpoint']}")
         res["id"] = testdata['id']
         res['rowNum'] = testdata['rowNum']
         res['statuscode'] = str(r.status_code)
         res['text'] = r.content.decode("utf-8")
         res["times"] = str(r.elapsed.total_seconds())
-        if res['statuscode']!= "200":
-            res["error"] = res['text']
-        else:
-            res["error"] = ""
+        res["error"] = res['text'] if res['statuscode']!= "200" else ""
         res["msg"] = ""
-        if testdata["checkpoint"] in res["text"]:
-            res["result"] = "pass"
-            print("测试结果为：%s---->%s" % (test_nub,res["result"]))
-        else:
-            res["result"] = "fail"
-            print("测试结果为：%s---->%s" % (test_nub, res["result"]))
+        res["result"] = "pass" if testdata["checkpoint"] in res["text"] else "fail"
+        print(f'测试结果为：{test_nub}---->{res["result"]}')
         return res
     except  Exception as msg:
         res["msg"] = str(msg)

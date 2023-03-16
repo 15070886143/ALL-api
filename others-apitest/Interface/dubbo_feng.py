@@ -18,9 +18,9 @@ class DubboInterface:
         try:
             result=HessianProxy(self.url+self.interface)
             return_result=getattr(result,self.method)(self.interfaceparam)
-            LOG.info('测试返回结果:%s'%return_result)
+            LOG.info(f'测试返回结果:{return_result}')
             res={'code':0,'result':return_result}
         except Exception as e:
-            LOG.info('测试失败，原因：%s'%e)
+            LOG.info(f'测试失败，原因：{e}')
             res={'code':1,'result':e}
         return  res

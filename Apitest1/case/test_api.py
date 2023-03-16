@@ -29,23 +29,23 @@ class Test_api(unittest.TestCase):
     @ddt.data(*testdata)
     def test_api(self, data):
         # try:
-            # 先复制excel数据到report
-            res = base_api.send_requests(self.s, data)
-            base_api.wirte_result(res, filename=reportxlsx)
-            # 检查点 checkpoint
+        # 先复制excel数据到report
+        res = base_api.send_requests(self.s, data)
+        base_api.wirte_result(res, filename=reportxlsx)
+        # 检查点 checkpoint
 
-            check = data["checkpoint"]
-            print("期望结果->：%s"%check)
-            # 返回结果
-            res_text = res["text"]
-            print("实际结果->：%s"%res_text)
+        check = data["checkpoint"]
+        print(f"期望结果->：{check}")
+        # 返回结果
+        res_text = res["text"]
+        print(f"实际结果->：{res_text}")
 
-            # mylog.info("期望结果->：%s"%check)
+        # mylog.info("期望结果->：%s"%check)
 
-            # mylog.info("实际结果->：%s"%res_text)
-            # 断言
-            # LOG.info("检查点->：%s,返回实际结果->:%s" % (check,res_text))
-            self.assert_(check in res_text)
+        # mylog.info("实际结果->：%s"%res_text)
+        # 断言
+        # LOG.info("检查点->：%s,返回实际结果->:%s" % (check,res_text))
+        self.assert_(check in res_text)
 
 
 if __name__ == "__main__":

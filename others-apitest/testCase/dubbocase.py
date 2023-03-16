@@ -22,7 +22,9 @@ def testdubbointerface():
         dubboapi=DubboInterface(url=listurl,interface=listinterface[i],method=listmeth[i],param=listfobject[i],**(eval(listparam[i])))
         dubboapireslu=dubboapi.getresult()
         if dubboapireslu['code'] == 0:
-            LOG.info('inputdata> 参数:%s, url:%s ,返回:%s,预期:%s' % (listparam[i], listurl[i], dubboapireslu, listassert[i]))
+            LOG.info(
+                f'inputdata> 参数:{listparam[i]}, url:{listurl[i]} ,返回:{dubboapireslu},预期:{listassert[i]}'
+            )
             assert_re = assert_in(asserqiwang=listassert[i], fanhuijson=dubboapireslu)
             if assert_re['code'] == 0:
                 list_json.append(dubboapireslu['result'])

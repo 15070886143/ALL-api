@@ -13,12 +13,12 @@ class logger():
         #创建一个logger
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.DEBUG)
-        log_names = '../log/log/'
         # if not os.path.exists(log_names):os.makedirs(log_names)
         #防止请求重复的日志
         if not self.logger.handlers:
             #设置当前时间
             rq = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+            log_names = '../log/log/'
             #设置存放日志的名字
             log_name = log_names + rq + '.log'
 

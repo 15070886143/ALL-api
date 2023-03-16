@@ -31,10 +31,10 @@ class Test_api(unittest.TestCase):
         base_api.wirte_result(res, filename=reportxlsx)
         # 检查点 checkpoint
         check = data["checkpoint"]
-        print("检查点->：%s"%check)
+        print(f"检查点->：{check}")
         # 返回结果
         res_text = res["text"]
-        print("返回实际结果->：%s"%res_text)
+        print(f"返回实际结果->：{res_text}")
         # 断言
         self.assertIsNotNone(check , res_text)
         # if check in res_text:

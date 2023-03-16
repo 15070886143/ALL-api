@@ -21,16 +21,12 @@ class ExcelUtil():
             print("总行数小于1")
         else:
             r = []
-            j = 1
-            for i in list(range(self.rowNum-1)):
-                s = {}
-                # 从第二行取对应values值
-                s['rowNum'] = i+2
+            for j, i in enumerate(list(range(self.rowNum-1)), start=1):
+                s = {'rowNum': i + 2}
                 values = self.table.row_values(j)
                 for x in list(range(self.colNum)):
                     s[self.keys[x]] = values[x]
                 r.append(s)
-                j += 1
             return r
 if __name__ == "__main__":
     filepath = r"C:\Users\Administrator\PycharmProjects\untited4\Apitest\data\textcase01.xlsx"

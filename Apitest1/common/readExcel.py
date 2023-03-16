@@ -27,20 +27,14 @@ class ExcelUtil(object):
         else:
             #设置空list，用来存储文件中的数据
             r = []
-            #设置起始值
-            j = 1
             #因为第一行是标题所以总行数要-1
-            for i in list(range(self.rowNum-1)):
+            for j, i in enumerate(list(range(self.rowNum-1)), start=1):
                 #创建空对象
-                s = {}
-                # 从第二行取对应values值
-                s['rowNum'] = i+2
-
+                s = {'rowNum': i + 2}
                 values = self.table.row_values(j)
                 for x in list(range(self.colNum)):
                     s[self.keys[x]] = values[x]
                 r.append(s)
-                j += 1
             return r
 if __name__ == "__main__":
     excelPath ='../data/textcase01.xlsx'

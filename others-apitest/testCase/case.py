@@ -24,14 +24,15 @@ def testinterface():
             api = TestApi(url=TestPlanUrl+listurl[i], key=listkey[i], connent=listconeent[i], fangshi=listfangshi[i])
             apijson = api.getJson()
             if apijson['code'] == 0:
-                LOG.info('inputdata> 参数:%s, url:%s ,返回:%s,预期:%s' % (listconeent[i], listurl[i], apijson, listqiwang[i]))
+                LOG.info(
+                    f'inputdata> 参数:{listconeent[i]}, url:{listurl[i]} ,返回:{apijson},预期:{listqiwang[i]}'
+                )
                 assert_re = assert_in(asserqiwang=listqiwang[i], fanhuijson=apijson)
                 if assert_re['code'] == 0:
                     list_json.append(apijson['result'])
                     listrelust.append('pass')
                     list_pass += 1
                     error_num=0
-                    continue
                 elif assert_re['code'] == 1:
                     if error_num <=Config_Try_Num:
                         error_num+=1
@@ -54,26 +55,24 @@ def testinterface():
                         listrelust.append('exception')
                         list_json.append(assert_re['result'])
                         break
-                else:
-                    if error_num <Config_Try_Num:
-                        error_num+=1
-                        LOG.info('失败重试中')
-                    else:
-                        LOG.info('失败重试中次数用完，最后结果')
-                        error_num=0
-                        list_weizhi += 1
-                        listrelust.append('未知错误')
-                        list_json.append('未知错误')
-                        break
-            else:
-                if error_num <Config_Try_Num:
+                elif error_num <Config_Try_Num:
                     error_num+=1
                     LOG.info('失败重试中')
                 else:
                     LOG.info('失败重试中次数用完，最后结果')
                     error_num=0
-                    list_exption += 1
-                    listrelust.append('exception')
-                    list_json.append(apijson['result'])
+                    list_weizhi += 1
+                    listrelust.append('未知错误')
+                    list_json.append('未知错误')
                     break
+            elif error_num <Config_Try_Num:
+                error_num+=1
+                LOG.info('失败重试中')
+            else:
+                LOG.info('失败重试中次数用完，最后结果')
+                error_num=0
+                list_exption += 1
+                listrelust.append('exception')
+                list_json.append(apijson['result'])
+                break
     return listrelust, list_fail, list_pass, list_json, list_exption, list_weizhi

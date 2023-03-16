@@ -7,7 +7,7 @@
 import  os
 titles='接口测试'
 def title(titles):
-    title='''<!DOCTYPE html>
+    return '''<!DOCTYPE html>
 <html>
 <head>
 	<title>%s</title>
@@ -28,13 +28,14 @@ def title(titles):
     </style>
 </head>
 <body>
-	'''%(titles)
-    return title
+	''' % (
+        titles
+    )
 connent='''
 <div  class='col-md-4 col-md-offset-4' style='margin-left:3%;'>
 <h1>接口测试的结果</h1>'''
 def shouye(starttime,endtime,passge,fail,excepthions,weizhicuowu):
-    beijing='''
+    return '''
     <table  class="table table-hover table-condensed">
             <tbody>
                 <tr>
@@ -49,8 +50,15 @@ def shouye(starttime,endtime,passge,fail,excepthions,weizhicuowu):
 			       weizhicuowu : <strong >%s</strong></span></td>                  
 			   </tr> 
 			   </tbody></table>
-			   </div> '''%(starttime,endtime,(endtime-starttime),passge,fail,excepthions,weizhicuowu)
-    return beijing
+			   </div> ''' % (
+        starttime,
+        endtime,
+        (endtime - starttime),
+        passge,
+        fail,
+        excepthions,
+        weizhicuowu,
+    )
 shanghai='''<div class="row " style="margin:60px">
         <div style='    margin-top: 18%;' >
         <div class="btn-group" role="group" aria-label="...">
@@ -76,17 +84,16 @@ shanghai='''<div class="row " style="margin:60px">
         </tr>
     '''
 def passfail(tend):
-    if tend =='pass':
-        htl='''<td bgcolor="green">pass</td>'''
-    elif tend =='fail':
-        htl='''<td bgcolor="fail">fail</td>'''
-    elif tend=='weizhi':
-        htl='''<td bgcolor="red">error</td>'''
+    if tend == 'fail':
+        return '''<td bgcolor="fail">fail</td>'''
+    elif tend == 'pass':
+        return '''<td bgcolor="green">pass</td>'''
+    elif tend == 'weizhi':
+        return '''<td bgcolor="red">error</td>'''
     else:
-        htl = '<td bgcolor="crimson">exect</td>'
-    return htl
+        return '<td bgcolor="crimson">exect</td>'
 def ceshixiangqing(reslt,id,name,key,coneent,url,meth,yuqi,json,relust):
-    xiangqing='''
+    return '''
         <tr class="case-tr %s">
             <td>%s</td>
             <td>%s</td>
@@ -98,8 +105,18 @@ def ceshixiangqing(reslt,id,name,key,coneent,url,meth,yuqi,json,relust):
             <td>%s</td>
             %s
         </tr>
-    '''%(reslt,id,name,key,coneent,url,meth,yuqi,json,passfail(relust))
-    return xiangqing
+    ''' % (
+        reslt,
+        id,
+        name,
+        key,
+        coneent,
+        url,
+        meth,
+        yuqi,
+        json,
+        passfail(relust),
+    )
 weibu='''</div></div></table><script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript">
@@ -133,22 +150,36 @@ weibu='''</div></div></table><script src="https://code.jquery.com/jquery.js"></s
 </script>
 </body></html>'''
 def relust(titles,starttime,endtime,passge,fail,id,name,key,coneent,url,meth,yuqi,json,relust,exceptions,weizhi):
-    if type(name) ==list:
-        relus=' '
-        for i in range(len(name)):
-            if relust[i] == "pass":
-                clazz = "success"
-            elif relust[i]== "fail":
-                clazz = "warning"
-            elif relust[i]== "weizhi":
-                clazz = "danger"
-            else:
-                clazz='error'
-            relus+=(ceshixiangqing(clazz,id[i],name[i],key[i],coneent[i],url[i],meth[i],yuqi[i],json[i],relust[i]))
-        text=title(titles)+connent+shouye(starttime,endtime,passge,fail,exceptions,weizhi)+shanghai+relus+weibu
-    else:
-        text=title(titles)+connent+shouye(starttime,endtime,passge,fail,exceptions,weizhi)+shanghai+ceshixiangqing(id,name,key,coneent,url,meth,yuqi,json,relust)+weibu
-    return text
+    if type(name) != list:
+        return (
+            title(titles)
+            + connent
+            + shouye(starttime, endtime, passge, fail, exceptions, weizhi)
+            + shanghai
+            + ceshixiangqing(
+                id, name, key, coneent, url, meth, yuqi, json, relust
+            )
+            + weibu
+        )
+    relus=' '
+    for i in range(len(name)):
+        if relust[i] == "pass":
+            clazz = "success"
+        elif relust[i]== "fail":
+            clazz = "warning"
+        elif relust[i]== "weizhi":
+            clazz = "danger"
+        else:
+            clazz='error'
+        relus+=(ceshixiangqing(clazz,id[i],name[i],key[i],coneent[i],url[i],meth[i],yuqi[i],json[i],relust[i]))
+    return (
+        title(titles)
+        + connent
+        + shouye(starttime, endtime, passge, fail, exceptions, weizhi)
+        + shanghai
+        + relus
+        + weibu
+    )
 def createHtml(filepath,titles,starttime,endtime,passge,fail,id,name,key,coneent,url,meth,yuqi,json,relusts,exceptions,weizhi):
     texts=relust(titles,starttime,endtime,passge,fail,id,name,key,coneent,url,meth,yuqi,json,relusts,exceptions,weizhi)
     with open(filepath,'wb') as f:

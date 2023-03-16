@@ -610,10 +610,7 @@ class HTMLTestRunner(Template_mixin):
     def __init__(self, stream=sys.stdout, verbosity=1, title=None, description=None):
         self.stream = stream
         self.verbosity = verbosity
-        if title is None:
-            self.title = self.DEFAULT_TITLE
-        else:
-            self.title = title
+        self.title = self.DEFAULT_TITLE if title is None else title
         if description is None:
             self.description = self.DEFAULT_DESCRIPTION
         else:
@@ -638,14 +635,13 @@ class HTMLTestRunner(Template_mixin):
         # Here at least we want to group them together by class.
         rmap = {}
         classes = []
-        for n,t,o,e in result_list:
+        for n, t, o, e in result_list:
             cls = t.__class__
-            if not cls in rmap:
+            if cls not in rmap:
                 rmap[cls] = []
                 classes.append(cls)
             rmap[cls].append((n,t,o,e))
-        r = [(cls, rmap[cls]) for cls in classes]
-        return r
+        return [(cls, rmap[cls]) for cls in classes]
 
 
     def getReportAttributes(self, result):
@@ -656,13 +652,13 @@ class HTMLTestRunner(Template_mixin):
         startTime = str(self.startTime)[:19]
         duration = str(self.stopTime - self.startTime)
         status = []
-        if result.success_count: status.append('Pass %s'    % result.success_count)
-        if result.failure_count: status.append('Failure %s' % result.failure_count)
-        if result.error_count:   status.append('Error %s'   % result.error_count  )
-        if status:
-            status = ' '.join(status)
-        else:
-            status = 'none'
+        if result.success_count:
+            status.append(f'Pass {result.success_count}')
+        if result.failure_count:
+            status.append(f'Failure {result.failure_count}')
+        if result.error_count:
+            status.append(f'Error {result.error_count}')
+        status = ' '.join(status) if status else 'none'
         return [
             ('开始时间', startTime),
             ('耗时', duration),
@@ -672,7 +668,7 @@ class HTMLTestRunner(Template_mixin):
 
     def generateReport(self, test, result):
         report_attrs = self.getReportAttributes(result)
-        generator = 'HTMLTestRunner %s' % __version__
+        generator = f'HTMLTestRunner {__version__}'
         stylesheet = self._generate_stylesheet()
         heading = self._generate_heading(report_attrs)
         report = self._generate_report(result)
@@ -700,12 +696,11 @@ class HTMLTestRunner(Template_mixin):
                     value = saxutils.escape(value),
                 )
             a_lines.append(line)
-        heading = self.HEADING_TMPL % dict(
-            title = saxutils.escape(self.title),
-            parameters = ''.join(a_lines),
-            description = saxutils.escape(self.description),
+        return self.HEADING_TMPL % dict(
+            title=saxutils.escape(self.title),
+            parameters=''.join(a_lines),
+            description=saxutils.escape(self.description),
         )
-        return heading
 
 
     def _generate_report(self, result):
@@ -723,59 +718,54 @@ class HTMLTestRunner(Template_mixin):
             if cls.__module__ == "__main__":
                 name = cls.__name__
             else:
-                name = "%s.%s" % (cls.__module__, cls.__name__)
+                name = f"{cls.__module__}.{cls.__name__}"
             doc = cls.__doc__ and cls.__doc__.split("\n")[0] or ""
-            desc = doc and '%s: %s' % (name, doc) or name
+            desc = doc and f'{name}: {doc}' or name
 
             row = self.REPORT_CLASS_TMPL % dict(
-                style = ne > 0 and 'errorClass' or nf > 0 and 'failClass' or 'passClass',
-                desc = desc,
-                count = np+nf+ne,
-                Pass = np,
-                fail = nf,
-                error = ne,
-                cid = 'c%s' % (cid+1),
+                style=ne > 0
+                and 'errorClass'
+                or nf > 0
+                and 'failClass'
+                or 'passClass',
+                desc=desc,
+                count=np + nf + ne,
+                Pass=np,
+                fail=nf,
+                error=ne,
+                cid=f'c{cid + 1}',
             )
             rows.append(row)
 
             for tid, (n,t,o,e) in enumerate(cls_results):
                 self._generate_report_test(rows, cid, tid, n, t, o, e)
 
-        report = self.REPORT_TMPL % dict(
-            test_list = ''.join(rows),
-            count = str(result.success_count+result.failure_count+result.error_count),
-            Pass = str(result.success_count),
-            fail = str(result.failure_count),
-            error = str(result.error_count),
+        return self.REPORT_TMPL % dict(
+            test_list=''.join(rows),
+            count=str(
+                result.success_count + result.failure_count + result.error_count
+            ),
+            Pass=str(result.success_count),
+            fail=str(result.failure_count),
+            error=str(result.error_count),
         )
-        return report
 
 
     def _generate_report_test(self, rows, cid, tid, n, t, o, e):
         # e.g. 'pt1.1', 'ft1.1', etc
         has_output = bool(o or e)
-        tid = (n == 0 and 'p' or 'f') + 't%s.%s' % (cid+1,tid+1)
+        tid = (n == 0 and 'p' or 'f') + f't{cid + 1}.{tid + 1}'
         name = t.id().split('.')[-1]
         doc = t.shortDescription() or ""
-        desc = doc and ('%s: %s' % (name, doc)) or name
+        desc = doc and f'{name}: {doc}' or name
         tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL or self.REPORT_TEST_NO_OUTPUT_TMPL
 
         # o and e should be byte string because they are collected from stdout and stderr?
-        if isinstance(o,str):
-            # TODO: some problem with 'string_escape': it escape \n and mess up formating
-            # uo = unicode(o.encode('string_escape'))
-            # uo = o.decode('latin-1')
-            uo = e
-        else:
-            uo = o
-        if isinstance(e,str):
-            # TODO: some problem with 'string_escape': it escape \n and mess up formating
-            # ue = unicode(e.encode('string_escape'))
-            # ue = e.decode('latin-1')
-            ue = e
-        else:
-            ue = e
-
+        uo = e if isinstance(o,str) else o
+        # TODO: some problem with 'string_escape': it escape \n and mess up formating
+        # ue = unicode(e.encode('string_escape'))
+        # ue = e.decode('latin-1')
+        ue = e
         script = self.REPORT_TEST_OUTPUT_TMPL % dict(
             id = tid,
             output = saxutils.escape(str(uo)+ue),

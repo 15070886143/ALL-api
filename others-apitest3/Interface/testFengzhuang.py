@@ -13,16 +13,11 @@ class TestApi(object):
 		self.connent=connent
 		self.fangshi=fangshi
 	def testapi(self):
-		if self.fangshi=='POST':
+		if self.fangshi in ['POST', "GET"]:
 			self.parem = {'key': self.key, 'info': self.connent}
 			r=reques.post(self.url,self.parem)
-		elif self.fangshi=="GET":
-			self.parem = {'key': self.key, 'info': self.connent}
-			r = reques.post(self.url, self.parem)
 		return r
 	def getcode(self):
-		code=self.testapi()['code']
-		return code
+		return self.testapi()['code']
 	def getJson(self):
-		json_data = self.testapi()
-		return json_data
+		return self.testapi()
