@@ -7,7 +7,7 @@ import time
 # 设置报告文件保存路径
 from framework.SendEmail import SendMail
 
-report_path = os.path.abspath(os.curdir) + '/testReports/'
+report_path = f'{os.path.abspath(os.curdir)}/testReports/'
 # 获取系统当前时间
 now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
 

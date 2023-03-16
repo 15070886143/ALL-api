@@ -32,13 +32,21 @@ def sendMail(result_html,result_xslx):
     part1 = MIMEBase ( 'application' , 'octet-stream' )#'octet-stream': binary data   创建附件对象
     part1.set_payload ( open ( result_html , 'rb' ).read ( ) )  # 将附件源文件加载到附件对象
     encoders.encode_base64 ( part1 )
-    part1.add_header ( 'Content-Disposition' , 'attachment' , filename = ('gbk' , '' , '%s' % result_htmlbt) )  # 给附件添加头文件
+    part1.add_header(
+        'Content-Disposition',
+        'attachment',
+        filename=('gbk', '', f'{result_htmlbt}'),
+    )
     msg.attach ( part1 )
     #发送文档附件)
     part2 = MIMEBase ( 'application' , 'octet-stream' )#'octet-stream': binary data   创建附件对象
     part2.set_payload ( open ( result_xslx , 'rb' ).read ( ) )  # 将附件源文件加载到附件对象
     encoders.encode_base64 ( part2 )
-    part2.add_header ( 'Content-Disposition' , 'attachment' , filename = ('gbk' , '' , '%s' % result_excelbt) )  # 给附件添加头文件
+    part2.add_header(
+        'Content-Disposition',
+        'attachment',
+        filename=('gbk', '', f'{result_excelbt}'),
+    )
     msg.attach ( part2 )
     try:
         smtpObj = smtplib.SMTP_SSL (mail_host , 465)

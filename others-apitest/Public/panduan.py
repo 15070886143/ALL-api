@@ -8,7 +8,7 @@ def assert_in(asserqiwang,fanhuijson):
     if len(asserqiwang.split('=')) > 1:
         data = asserqiwang.split('&')
         result = dict([(item.split('=')) for item in data])
-        value1=([(str(res(fanhuijson,key))) for key in result.keys()])
+        value1 = [(str(res(fanhuijson,key))) for key in result]
         value2=([(str(value)) for value in result.values()])
         if value1==value2:
             return  { 'code':0,"result":'pass'}
@@ -21,8 +21,7 @@ def assert_in(asserqiwang,fanhuijson):
 def assertre(asserqingwang):
     if len(asserqingwang.split('=')) > 1:
         data = asserqingwang.split('&')
-        result = dict([(item.split('=')) for item in data])
-        return result
+        return dict([(item.split('=')) for item in data])
     else:
         LOG.info('填写测试预期值')
         raise {"code":1,'result':'填写测试预期值'}

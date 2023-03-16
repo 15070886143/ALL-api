@@ -581,19 +581,12 @@ class HTMLTestReportCN(Template_mixin):
     def __init__(self, stream=sys.stdout, verbosity=1,title=None,description=None,tester=None):
         self.stream = stream
         self.verbosity = verbosity
-        if title is None:
-            self.title = self.DEFAULT_TITLE
-        else:
-            self.title = title
+        self.title = self.DEFAULT_TITLE if title is None else title
         if description is None:
             self.description = self.DEFAULT_DESCRIPTION
         else:
             self.description = description
-        if tester is None:
-            self.tester = self.DEFAULT_TESTER
-        else:
-            self.tester = tester
-
+        self.tester = self.DEFAULT_TESTER if tester is None else tester
         self.startTime = datetime.datetime.now()
 
 
@@ -620,8 +613,7 @@ class HTMLTestReportCN(Template_mixin):
                 rmap[cls] = []
                 classes.append(cls)
             rmap[cls].append((n,t,o,e))
-        r = [(cls, rmap[cls]) for cls in classes]
-        return r
+        return [(cls, rmap[cls]) for cls in classes]
 
     #替换测试结果status为通过率 --Findyou
     def getReportAttributes(self, result):
@@ -631,11 +623,15 @@ class HTMLTestReportCN(Template_mixin):
         """
         startTime = str(self.startTime)[:19]
         duration = str(self.stopTime - self.startTime)
-        status = []
-        status.append('共 %s' % (result.success_count + result.failure_count + result.error_count))
-        if result.success_count: status.append('通过 %s'    % result.success_count)
-        if result.failure_count: status.append('失败 %s' % result.failure_count)
-        if result.error_count:   status.append('错误 %s'   % result.error_count  )
+        status = [
+            f'共 {result.success_count + result.failure_count + result.error_count}'
+        ]
+        if result.success_count:
+            status.append(f'通过 {result.success_count}')
+        if result.failure_count:
+            status.append(f'失败 {result.failure_count}')
+        if result.error_count:
+            status.append(f'错误 {result.error_count}')
         if status:
             status = '，'.join(status)
         # 合入Github：boafantasy代码
@@ -647,15 +643,15 @@ class HTMLTestReportCN(Template_mixin):
             status = 'none'
         return [
             (u'测试人员', self.tester),
-            (u'开始时间',startTime),
-            (u'合计耗时',duration),
-            (u'测试结果',status + "，通过率= "+self.passrate),
+            (u'开始时间', startTime),
+            (u'合计耗时', duration),
+            (u'测试结果', f"{status}，通过率= {self.passrate}"),
         ]
 
 
     def generateReport(self, test, result):
         report_attrs = self.getReportAttributes(result)
-        generator = 'HTMLTestReportCN %s' % __version__
+        generator = f'HTMLTestReportCN {__version__}'
         stylesheet = self._generate_stylesheet()
         heading = self._generate_heading(report_attrs)
         report = self._generate_report(result)
@@ -683,13 +679,12 @@ class HTMLTestReportCN(Template_mixin):
                     value = saxutils.escape(value),
                 )
             a_lines.append(line)
-        heading = self.HEADING_TMPL % dict(
-            title = saxutils.escape(self.title),
-            parameters = ''.join(a_lines),
-            description = saxutils.escape(self.description),
-            tester= saxutils.escape(self.tester),
+        return self.HEADING_TMPL % dict(
+            title=saxutils.escape(self.title),
+            parameters=''.join(a_lines),
+            description=saxutils.escape(self.description),
+            tester=saxutils.escape(self.tester),
         )
-        return heading
 
     #生成报告  --Findyou添加注释
     def _generate_report(self, result):
@@ -707,33 +702,34 @@ class HTMLTestReportCN(Template_mixin):
             if cls.__module__ == "__main__":
                 name = cls.__name__
             else:
-                name = "%s.%s" % (cls.__module__, cls.__name__)
+                name = f"{cls.__module__}.{cls.__name__}"
             doc = cls.__doc__ and cls.__doc__.split("\n")[0] or ""
-            desc = doc and '%s: %s' % (name, doc) or name
+            desc = doc and f'{name}: {doc}' or name
 
             row = self.REPORT_CLASS_TMPL % dict(
-                style = ne > 0 and 'warning' or nf > 0 and 'danger' or 'success',
-                desc = desc,
-                count = np+nf+ne,
-                Pass = np,
-                fail = nf,
-                error = ne,
-                cid = 'c%s' % (cid+1),
+                style=ne > 0 and 'warning' or nf > 0 and 'danger' or 'success',
+                desc=desc,
+                count=np + nf + ne,
+                Pass=np,
+                fail=nf,
+                error=ne,
+                cid=f'c{cid + 1}',
             )
             rows.append(row)
 
             for tid, (n,t,o,e) in enumerate(cls_results):
                 self._generate_report_test(rows, cid, tid, n, t, o, e)
 
-        report = self.REPORT_TMPL % dict(
-            test_list = ''.join(rows),
-            count = str(result.success_count+result.failure_count+result.error_count),
-            Pass = str(result.success_count),
-            fail = str(result.failure_count),
-            error = str(result.error_count),
-            passrate =self.passrate,
+        return self.REPORT_TMPL % dict(
+            test_list=''.join(rows),
+            count=str(
+                result.success_count + result.failure_count + result.error_count
+            ),
+            Pass=str(result.success_count),
+            fail=str(result.failure_count),
+            error=str(result.error_count),
+            passrate=self.passrate,
         )
-        return report
 
 
     def _generate_report_test(self, rows, cid, tid, n, t, o, e):
@@ -741,14 +737,12 @@ class HTMLTestReportCN(Template_mixin):
         has_output = bool(o or e)
         # ID修改点为下划线,支持Bootstrap折叠展开特效 - Findyou v0.8.2.1
         #增加error分类 - Findyou v0.8.2.3
-        tid = (n == 0 and 'p' or n == 1 and 'f' or 'e') + 't%s_%s' % (cid + 1, tid + 1)
+        tid = (n == 0 and 'p' or n == 1 and 'f' or 'e') + f't{cid + 1}_{tid + 1}'
         name = t.id().split('.')[-1]
         doc = t.shortDescription() or ""
-        desc = doc and ('%s' % (name)) or name
+        desc = doc and f'{name}' or name
         tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL or self.REPORT_TEST_NO_OUTPUT_TMPL
 
-        # utf-8 支持中文 - Findyou
-         # o and e should be byte string because they are collected from stdout and stderr?
         if isinstance(o, str):
             # TODO: some problem with 'string_escape': it escape \n and mess up formating
             # uo = unicode(o.encode('string_escape'))

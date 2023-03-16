@@ -11,24 +11,15 @@ def res(d,code):
         result.append(value)
         return result
     elif isinstance(d, (list, tuple)):
-            for item in d:
-                value=res(item,code)
-                if value =="None" or value is None:
-                    pass
-                elif len(value)==0:
-                    pass
-                else:
-                    result.append(value)
-            return result
+        for item in d:
+            value=res(item,code)
+            if value != "None" and value is not None and len(value) != 0:
+                result.append(value)
+        return result
     else:
         if isinstance(d, dict):
             for k in d:
                 value=res(d[k], code)
-                if value =="None" or value is None :
-                    pass
-                elif len(value)==0:
-                    pass
-                else:
-                    for item in value:
-                        result.append(item)
+                if value != "None" and value is not None and len(value) != 0:
+                    result.extend(iter(value))
             return result

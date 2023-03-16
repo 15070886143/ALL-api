@@ -16,10 +16,7 @@ def send_ding(content):
         "isAtAll": True
     }
     headers = {
-        'Content-Type': 'application/json'
-	}
+    'Content-Type': 'application/json'
+    }
     f = requests.post(url, data=json.dumps(pagrem), headers=headers)
-    if f.status_code==200:
-        return True
-    else:
-        return False
+    return f.status_code == 200

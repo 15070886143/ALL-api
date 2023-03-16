@@ -28,5 +28,5 @@ def datacel(filrpath):
             listqiwang.append((me.cell(i,6).value))
         return listid,listkey,listconeent,listurl,listfangshi,listqiwang,listname
     except Exception as e:
-        LOG.info('打开测试用例失败，原因是:%s'%e)
+        LOG.info(f'打开测试用例失败，原因是:{e}')
         return

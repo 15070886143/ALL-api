@@ -20,5 +20,4 @@ class TestApi(object):
 			self.response = reques.get(url=self.url,params=self.parem)
 		return self.response
 	def getJson(self):
-		json_data = self.testapi()
-		return json_data
+		return self.testapi()
